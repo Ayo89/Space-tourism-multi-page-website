@@ -1,0 +1,9 @@
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/home/background-home-desktop.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
