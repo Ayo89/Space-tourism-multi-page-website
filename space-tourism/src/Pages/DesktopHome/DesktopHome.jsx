@@ -1,5 +1,5 @@
 import './DesktopHome.css'
-
+import {Link} from 'react-router-dom'
 function DesktopHome() {
   return (
     <div id="container-home">
@@ -20,9 +20,9 @@ function DesktopHome() {
       </div>
 
       <div id="container-large-button">
-        <div id="wrapper-button">
+        <Link id="wrapper-button">
           <a>Explore</a>
-        </div>
+        </Link>
       </div>
     </div>
   )

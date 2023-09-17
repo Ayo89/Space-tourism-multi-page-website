@@ -57,14 +57,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 #wrapper-button {
   width: 274px;
   height: 274px;
   flex-shrink: 0;
-  border-radius: 274px;
+  border-radius: 50%;
   background: #fff;
   position: relative;
+}
+
+#wrapper-button::before {
+  content: ""; /* Esencial para que el pseudo-elemento sea visible. */
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  right: -60px;
+  bottom: -60px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1); 
+  transform: scale(0); 
+  transition: transform 0.3s; 
+}
+
+#wrapper-button:hover::before {
+  transform: scale(1); 
 }
 
 #wrapper-button a {
