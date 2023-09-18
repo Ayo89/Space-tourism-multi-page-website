@@ -85,7 +85,7 @@
   transform: scale(1); 
 }
 
-#wrapper-button a {
+#wrapper-button p {
   position: absolute;
   top: 50%;
   left: 50%;

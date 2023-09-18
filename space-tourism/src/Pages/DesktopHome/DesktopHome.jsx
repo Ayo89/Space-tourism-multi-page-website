@@ -1,6 +1,11 @@
+import { useContext } from 'react'
 import './DesktopHome.css'
 import {Link} from 'react-router-dom'
+import { StepContext } from '../../context/theme'
 function DesktopHome() {
+  const {
+    setStep
+  } = useContext(StepContext)
   return (
     <div id="container-home">
       <div id="wrapper-text">
@@ -20,8 +25,8 @@ function DesktopHome() {
       </div>
 
       <div id="container-large-button">
-        <Link id="wrapper-button">
-          <a>Explore</a>
+        <Link to={'/destination'} id="wrapper-button" onClick={() => setStep('container-destination')}>
+          <p>Explore</p>
         </Link>
       </div>
     </div>

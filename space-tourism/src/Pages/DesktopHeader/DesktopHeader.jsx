@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import './DesktopHeader.css'
 import logo from '../../assets/shared/logo.svg'
 import { Link } from 'react-router-dom'
 
-function DesktopHeader() {
+function DesktopHeader({ setStep }) {
   return (
     <header id="container-header">
       <div id="icon-header">
@@ -12,11 +13,19 @@ function DesktopHeader() {
       <div id="nav-bar">
         <div id="sort-bar"></div>
         <div id="wrapper-nav-bar">
-          <Link className="text-nav-bar">
+          <Link
+            to={'/'}
+            className="text-nav-bar"
+            onClick={() => setStep('container')}
+          >
             <span>00</span>
             <h6>Home</h6>
           </Link>
-          <Link className="text-nav-bar">
+          <Link
+            to={'/destination'}
+            onClick={() => setStep('container-destination')}
+            className="text-nav-bar"
+          >
             <span>01</span>
             <h6>Destination</h6>
           </Link>
